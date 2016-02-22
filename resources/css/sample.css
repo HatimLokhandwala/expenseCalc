@@ -1,0 +1,45 @@
+.form1 label input{
+
+display: block;
+
+width: none;
+}
+.form1{
+	width: 450px;
+	background-color: #aeaeae;
+	margin-top: 70px;
+	margin-left: 70px;
+	height: auto;
+}
+
+
+.form1 label{
+	padding-top: 5px;
+	text-align: center;
+	width: 150px;
+	float:left;
+	margin:2px; 
+
+}
+
+.form1 input{
+	margin-bottom: 10px;
+	float: left;
+	padding: 5px;	width: 280px;
+}
+
+.form1 select{
+	float: left;padding: 5px;
+	margin-bottom: 10px;
+	width: 295px;
+	border-radius: 4px;
+	height: 30px;
+}
+
+.form1 button{
+	height: 30px;
+	margin-left: 70px;
+	width: 100px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

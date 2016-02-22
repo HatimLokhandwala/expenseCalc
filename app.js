@@ -9,18 +9,20 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var http = require('http').Server(app);
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//view set up
+app.set('view engine', 'ejs');
+app.set('views','./views');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('resources'));
+
 
 app.use('/', routes);
 app.use('/users', users);
@@ -56,5 +58,10 @@ app.use(function(err, req, res, next) {
   });
 });
 
+var port = process.env.PORT || 4000;
+var server = http.listen(port);
 
-module.exports = app;
+//var host = server.address().address;
+//var port = server.address().port;
+
+console.log('Server listening at port: '+ port);

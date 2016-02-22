@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/sample.css">
+	<link rel="stylesheet" type="text/css" href="css/sample1.css">
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+	 <script>
+		$(function() {
+			$( "#datepicker" ).datepicker();
+		});
+  </script>
+</head>
+<body>
+
+<div id="formDiv">
+<form class="form1">
+
+
+			<label>NAME: </label>
+	
+				<input type="text"></input>
+				<br>
+
+			<label>PRICE: </label>
+		
+				<input type="text"></input>
+<br>
+			<label>DATE: </label>
+	
+				<input type="text" id="datepicker"></input>
+	<br>
+			<label>CATEGORY: </label>
+			
+				<select>
+					<option name="Clothes" value="Clothes"> Clothes</option>
+					<option name="Footwear" value="Footwear"> Footwear</option>
+					<option name="Eatables" value="Eatables"> Eatables</option>
+					<option name="Clothes" value="Clothes"> Electronics</option>
+				</select>
+<br>
+			<button>Submit</button> 	<button>Clear</button>
+<br>
+</form>
+
+
+</div>
+
+</body>
+</html>
